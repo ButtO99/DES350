@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bass Calculator</title>
+
+<svg height="100%" width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#010101;}
+</style>
+<polygon class="st0" points="253.8,1080.15 655.1,1080.15 443.38,837.15 617.38,649.15 786.27,649.15 855.1,540.15 782.38,502.15 
+	737.38,564.15 626.38,560.15 512.38,403.15 581.38,249.15 495.38,229.15 425.38,368.15 470.38,486.15 348.38,367.15 424.38,201.15 
+	356.38,176.15 271.98,360.53 364.38,505.15 237.38,411.15 231.38,262.15 166.38,281.15 172.38,436.15 305.38,547.15 173.38,516.15 
+	111.38,425.15 77.38,472.15 129.38,566.15 278.38,638.15 395.38,675.15 169.38,821.15 "/>
+<polygon class="st0" points="1659.32,1080.15 1258.02,1080.15 1469.74,837.15 1295.74,649.15 1126.85,649.15 1058.02,540.15 
+	1130.74,502.15 1175.74,564.15 1286.74,560.15 1400.74,403.15 1331.74,249.15 1417.74,229.15 1487.74,368.15 1442.74,486.15 
+	1564.74,367.15 1488.74,201.15 1556.74,176.15 1641.14,360.53 1548.74,505.15 1675.74,411.15 1681.74,262.15 1746.74,281.15 
+	1740.74,436.15 1607.74,547.15 1739.74,516.15 1801.74,425.15 1835.74,472.15 1783.74,566.15 1634.74,638.15 1517.74,675.15 
+	1743.74,821.15 "/>
+</svg>
+	
+<style>
+	
+	body {
+		background:rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		width: 100%;
+  		height: 100%;
+ 		margin: 0;
+	}
+	
+	html {
+	   width: 100%;
+  	   height: 100%;
+       margin: 0;
+	}
+	
+	#display {
+		background: none;
+		color: white;
+		border: none;
+		font-family: 'Dokdo', cursive;
+		font-size: 100pt;
+		float: left;
+		position: relative;
+		transform: rotate(5deg);
+		margin-left: 14%;
+		margin-top: -36%;
+		text-align: center;
+	}
+	
+	svg {
+	   width: 100%;
+  	   height: 100%;
+	}
+	
+	.number0{
+		font-size: 75px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -30%;
+		margin-left: 86.8%;
+		transform:rotate(-10deg);
+	}
+
+	.number1{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -30%;
+		margin-left: 10.6%;
+		transform:rotate(-30deg);
+	}
+	
+	.number2{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -37%;
+		margin-left: 13.9%;
+		transform:rotate(1deg);
+	}
+	
+	.number3{
+		font-size: 85px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -41.1%;
+		margin-left: 21.3%;
+		transform:rotate(22deg);
+	}
+	
+	.number4{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -39%;
+		margin-left: 27.8%;
+		transform:rotate(22deg);
+	}
+	
+	.number5{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -27%;
+		margin-left: 40.8%;
+		transform:rotate(25deg);
+	}
+	
+	.number6{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -27%;
+		margin-left: 56%;
+		transform:rotate(-25deg);
+	}
+	
+	.number7{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -39.5%;
+		margin-left: 68.4%;
+		transform:rotate(-22deg);
+	}
+	
+	.number8{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -42%;
+		margin-left: 75%;
+		transform:rotate(-22deg);
+	}
+	
+	.number9{
+		font-size: 90px;
+		color: rgba(255,45,19,1.00);
+		font-family: 'Dokdo', cursive;
+		background: none;
+		border: none;
+		position: absolute;
+		margin-top: -38%;
+		margin-left: 82.7%;
+		transform:rotate(5deg);
+	}
+	
+	.operators{
+		float: left;
+		transform: rotate(-15deg);
+		position: absolute;
+		margin-top: -18.6%;
+		margin-left: 29%;
+	}
+	
+	.operatoreq{
+	    font-size: 100px;
+		font-family: 'Dokdo', cursive;
+		border: none;
+		background: none;
+		color: white; 
+		margin-top: -15%;
+		margin-left: 15%;
+	}
+	
+	.operatoreq:hover{
+		font-size: 120px;
+	}
+	
+	.operatorcl{
+		padding:0;
+	    font-size: 140px;
+		border: none;
+		font-family: 'Dokdo', cursive;
+		background: none;
+		color: white; 
+	}
+	
+	.operatorcl:hover{
+		font-size: 160px;
+	}
+	
+	.operator{
+		background: none;
+		font-family: 'Dokdo', cursive;
+	    font-size: 160px;
+		color: white;
+		line-height: 110px;
+		border: none;
+	}
+	
+	.operator:hover{
+		font-size: 170px;
+	}
+	
+	.operatordiv{
+		background: none;
+		font-family: 'Dokdo', cursive;
+	    font-size: 130px;
+		color: white;
+		line-height: 110px;
+		margin-left: 5%;
+		border: none;
+	}
+	
+	.operatordiv:hover{
+		font-size: 139px;
+	}
+	
+	.operatordec{
+		background: none;
+		font-family: 'Dokdo', cursive;
+	    font-size: 180px;
+		color: white;
+		line-height: 110px;
+		margin-top: -28%;
+		margin-left: 10%;
+		border: none;
+	}
+	
+	.operatordec:hover{
+		font-size: 200px;
+	}
+	
+	.operators2{
+		float:right;
+		position: absolute;
+		margin-left: 57%;
+		margin-top: -19%;
+		transform: rotate(-25deg);
+	}
+	
+</style>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+<form name="calculator">
+	
+  <div id="myCalculator" class="myCalculator">
+	  
+    <div id="top_display" class="display">
+		
+      <input type="text" name="display" id="display" disabled>
+		
+    </div>
+	  
+	  <div class="numButtons">
+		
+      <input type="button" class="number1" value="1" onclick="calculator.display.value +='1'">
+		
+      <input type="button" class="number2" value="2" onclick="calculator.display.value +='2'">
+		
+      <input type="button" class="number3" value="3" onclick="calculator.display.value +='3'">
+		
+      <input type="button" class="number4" value="4" onclick="calculator.display.value +='4'">
+		
+      <input type="button" class="number5" value="5" onclick="calculator.display.value +='5'">
+		
+      <input type="button" class="number6" value="6" onclick="calculator.display.value +='6'">
+		
+      <input type="button" class="number7" value="7" onclick="calculator.display.value +='7'">
+		
+      <input type="button" class="number8" value="8" onclick="calculator.display.value +='8'">
+		
+      <input type="button" class="number9" value="9" onclick="calculator.display.value +='9'">
+	  
+      <input type="button" class="number0" value="0" onclick="calculator.display.value +='0'">
+		  
+	  </div>
+		
+    </div>
+	
+<div class="operators">
+
+<div class="inputRow">
+	
+      <input type="button" class="operatorcl" name="clear" value="clear" onclick="calculator.display.value=''">	
+	
+</div>
+		
+<div class="inputRow">
+	
+      <input type="button" class="operatoreq" name="equals" value="equals" onclick="calculator.display.value=eval(calculator.display.value)">
+		 
+</div>
+	
+</div>
+	
+<div class="operators2">
+	
+	<div class="inputRow">
+	
+      <input type="button" class="operator" name="add" value="+" onclick="calculator.display.value +='+'">
+		
+      <input type="button" class="operator" name="multiply" value="x" onclick="calculator.display.value +='x'">
+	
+	</div>
+	
+	<div class="inputRow">
+		
+      <input type="button" class="operator" name="subtract" value="-" onclick="calculator.display.value +='-'">
+		
+      <input type="button" class="operatordiv" name="divide" value="/" onclick="calculator.display.value +='/'">
+		
+	</div>
+	
+	<div class="inputRow">
+	
+	  <input type="button" class="operatordec" name="decimal" value="." onclick="calculator.display.value +='.'">
+		
+	</div>
+	
+	</div>
+
+</form>
+</body>
+</html>
