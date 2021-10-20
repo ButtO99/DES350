@@ -3,64 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <title>Homepage</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-	
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+body {
+    background: rgba(234,67,70,1.00);
+    margin: 0;
+}
+h1 {
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 150px;
+    margin: 0;
+    float: left;
+    padding-top: 15%;
+    padding-left: 10%;
+	font-weight: 700;
+}
+	
+.projtitles {
+	font-family: 'Urbanist', sans-serif;
+	color: white;
+	position: absolute;
+	font-size: 40px;
+	font-weight: 500;
+	padding-left: 10%;
+	}
+.links {
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 35px;
+    display: inline-block;
+    float: right;
+	padding-top: 25%;
+	padding-right: 10%;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+	font-weight: 100;
+	line-height: 60px;
+	transition: color 0.5s;
+}
+a:hover {
+    color: rgba(234,67,70,1.00);
+}
+	
+.about {
+	font-family: 'Urbanist', sans-serif;
+	color: white;
+	position: absolute;
+	font-size: 40px;
+	font-weight: 500;
+	padding-left: 10%;
+	padding-top: 80%;
+	z-index: -1;
+	}
 
-	body{
-	background: #a8d0e6;
+p{
+	font-family: 'Urbanist', sans-serif;
+	color: white;
+	position: absolute;
+	font-size: 20px;
+	font-weight: 100;
+	padding-left: 20%;
+	padding-top: 105%;
+	width: 75%;
+	z-index: -1;
 	}
+.circle {
+    position: fixed;
+    z-index: -1;
+    background: rgba(38,42,98,1.00);
+    height: 800px;
+    width: 800px;
+    border-radius: 800px;
+    right: 70%;
+    bottom: 20%
+}
+.linkbg {
+    position: absolute;
+    background: rgba(38,42,98,1.00);
+    height: 100%;
+    width: 400px;
+    z-index: -1;
+    right: 0%;
+}
+
+}
 	
-	h1{
-	color:#f76c6c;
-	font-family: 'Righteous', cursive;
-	font-size: 90px;
-	margin: 0;
-	border: thin;
-	border-color:#a5e300;
-	background: #24305e;
-	padding: 3%;
-	}
-	
-	.links{
-	color:#f76c6c;
-	font-family: 'Righteous', cursive;
-	font-size: 70px;
-	display:inline-block;
-	margin:0;
-	}
-	
-	a{
-	text-decoration: none;
-	display:block;
-	color: inherit;
-	background:#f8e9a1;
-	padding: 10%;
-	line-height: 70px;
-	}
-	
-	a:hover{
-		opacity: 70%;
-	}
 </style>
-		
 </head>
 
 <body>
-	
-<h1>Omar Butt - DES350</h1>
-	
-<div class="links">
-	
-<a href="calculator.html">Calculator</a>
-<a href="project1.html">Project 1 Calculator</a>
-<a href="project2.html">Project 2 Poster</a>
-<a href="sketches.html">Portrait Sketches</a>
-
+<div class="title">
+  <h1>Omar Butt</h1>
+	<div class="circle"></div>
 </div>
 	
+	
+<div class="linkbg">
+	<h2 class="projtitles">Projects</h2>
+		<div class="links"> 	
+			<a href="sketches.html">Project 3 Sketches</a> 	
+			<a href="project2.html">Project 2 Poster</a> 	
+			<a href="project1.html">Project 1 Calculator</a> 
+			<a href="calculator.html">Basic Calculator</a> 
+		</div>	
+	<h3 class="about">About me</h3>
+	<p>Hi, I'm Omar. I'm a Graphic Design student from Chicago who loves creating digital illustration and motion graphics.</p>
+</div>
 </body>
 </html>
