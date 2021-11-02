@@ -1,0 +1,785 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portrait</title>
+
+<style>
+	body {
+		background: #6663AF;
+	}
+	.notes {
+		position: absolute;
+		left: 50%;
+		margin-left: -500px;
+	}
+	.noteOne {
+		position: absolute; 
+		left: 540px;
+		top: 450px;
+		
+		animation-name: noteOne, notePulse;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes noteOne {
+		0% {
+			opacity: 0%;
+		}
+		39% {
+			opacity: 0%;
+			top: 450px;
+		}
+		45% {
+			opacity: 100%;
+		}
+		55% {
+		}
+		60% {
+		}
+		65% {
+			top: -90px;
+		}
+		66% {
+			top: -20px;
+			left: 550px;
+		}
+		80% {
+			opacity: 100%;
+		}
+		100% {
+			top: -20px;
+			left: 550px;
+			opacity: 0%;
+		}
+	}
+	@-webkit-keyframes notePulse {
+		
+	}
+	.noteOval {
+		position: absolute;
+		height: 55px;
+		width: 100px;
+		border-radius: 100%;
+		background: #C6BAEC;
+		top: 200px;
+		left: 8px;
+		}
+	.noteLine {
+		position: absolute;
+		height: 148.8175px;
+		width: 20.8296px;
+		background: #C6BAEC;
+		top: 80px;
+		left: 94.9px;
+		transform:rotate(6deg)
+	}
+	.notePoint {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 50px solid #C6BAEC;
+		transform: rotate(-60deg);
+		top: 79.7px;
+		left: 126.4px;
+	}
+	.mainholder {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -500px;
+		animation-name: head;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		zoom: 0.8;
+	}
+	@-webkit-keyframes head {
+		0% {
+			top: 100px;
+		}
+		12% {
+			top: 100px;
+		}
+		13% {
+			top: -40px;
+		}
+		14% {
+			top: 100px;
+		}
+		100% {
+			top: 100px;
+		}
+	}
+	.hairBG {
+		position: absolute;
+		height: 714.5635px;
+		width: 575.5487px;
+		border-radius: 100%;
+		background: grey;
+		left: 200px;
+		top: 110px;
+	}
+	.hairCircle {
+		position: absolute;
+		height: 638.4615px;
+		width: 604.1205px;
+		border-radius: 100%;
+		background: rgba(31,31,31,1.00);
+		left: 185px;
+		top: 115px;
+	}
+	.hairCircle2 {
+		position: absolute;
+		height: 638.4615px;
+		width: 604.1205px;
+		border-radius: 100%;
+		background: rgba(31,31,31,1.00);
+		left: 145px;
+		top: 93px;
+	}
+	.head {
+		position: absolute;
+		height: 714.5635px;
+		width: 575.5487px;
+		border-radius: 100%;
+		background: rgba(173,116,72,1.00);
+		left: 200px;
+		top: 186.4px;
+	}
+	.leftBag {
+		position: absolute;
+		height: 173.6454px;
+		width: 173.6454px;
+		border-radius: 100%;
+		background: rgba(159,87,56,1.00);
+		left: 266.4px;
+		top: 430.3px;
+	}
+	.rightBag {
+		position: absolute;
+		height: 173.6454px;
+		width: 173.6454px;
+		border-radius: 100%;
+		background: rgba(159,87,56,1.00);
+		left: 539.5966px;
+		top: 430.3px;
+	}
+	.leftSclera {
+		position: absolute;
+		height: 173.6454px;
+		width: 173.6454px;
+		border-radius: 100%;
+		background: white;
+		left: 266.4px;
+		top: 413.4195px;
+	}
+	.rightSclera {
+		position: absolute;
+		height: 173.6454px;
+		width: 173.6454px;
+		border-radius: 100%;
+		background: white;
+		left: 539.5966px;
+		top: 413.4195px;
+	}
+	.leftPupil {
+		position: absolute;
+		height: 38.9252px;
+		width: 38.9252px;
+		border-radius: 100%;
+		background: rgba(31,31,31,1.00);
+		left: 340px;
+		top: 460px;
+	}
+	.rightPupil {
+		position: absolute;
+		height: 38.9252px;
+		width: 38.9252px;
+		border-radius: 100%;
+		background: rgba(31,31,31,1.00);
+		left: 600px;
+		top: 460px;
+	}
+	.lidTop {
+		position: absolute;
+		height: 83.9819px;
+		width: 450.8421px;
+		background: rgba(173,116,72,1.00);
+		left: 265px;
+		top: 387px;
+	}
+	.lidBot {
+		position: absolute;
+		height: 120.9819px;
+		width: 450.8421px;
+		background: rgba(173,116,72,1.00);
+		left: 265px;
+		top: 520px;
+	}
+	.leftBrow {
+		position: absolute;
+		height: 36.5472px;
+		width: 164.7622px;
+		background: rgba(31,31,31,1.00);
+		left: 270px;
+		top: 390px;
+		position: absolute;
+		animation-name: browLeft;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes browLeft {
+		0% {
+			top: 390px;
+		}
+		12% {
+			top: 390px;
+		}
+		13% {
+			top: 330px;
+		}
+		100% {
+			top: 330px;
+		}
+	}
+	.rightBrow {
+		position: absolute;
+		height: 36.5472px;
+		width: 164.7622px;
+		background: rgba(31,31,31,1.00);
+		left: 540px;
+		top: 390px;
+		animation-name: browRight;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes browRight {
+		0% {
+			top: 390px;
+		}
+		12% {
+			top: 390px;
+		}
+		13% {
+			top: 330px;
+		}
+		100% {
+			top: 330px;
+		}
+	}
+	.nose {
+		position: absolute;
+		height: 219.0843px;
+		width: 78.8462px;
+		background: rgba(159,87,56,1.00);
+		left: 450px;
+		top: 500px;
+	}
+	.glasses {
+		position: absolute;
+		animation-name: glassesMove;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		}
+	@-webkit-keyframes glassesMove {
+		0% {
+			left: -10px;
+		}
+		9% {
+			left: -10px
+		}
+		10% {
+			left: 0px;
+		}
+		13% {
+			left: 0px;
+			top: 0px;
+		}
+		14% {
+			top: -20px;
+		}
+		15% {
+			top: 0px;
+		}
+		19% {
+			left: 0px;
+		}
+		20% {
+			left: -10px;
+		}
+		30% {
+			left: -10px;
+		}
+		31% {
+			left: 10px;
+		}
+		100% {
+			left: 10px;
+		}
+	}
+	.leftLens {
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		border: solid 20px rgba(31,31,31,1.00);
+		left: 520.5966px;
+		top: 384.4195px;
+	}
+	.rightLens {
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		border: solid 20px rgba(31,31,31,1.00);
+		left: 220.5966px;
+		top: 384.4195px;
+	}
+	.bridge {
+		position: absolute;
+		height: 160px;
+		width: 100px;
+		border: solid 30px rgba(31,31,31,1.00);
+		border-radius: 100%;
+		border-bottom: 0px;
+		border-left: 0px;
+		border-right: 0px;
+		left: 440px;
+		top: 480px;
+	}
+	.leftPoint {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 50px solid rgba(31,31,31,1.00);
+		transform: rotate(-120deg);
+		left: 730px;
+		top: 400px;
+	}
+	.rightPoint {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 50px solid rgba(31,31,31,1.00);
+		transform: rotate(120deg);
+		left: 210px;
+		top: 400px;
+	}
+	.mouth {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 180.3799px solid rgba(159,87,56,1.00);
+		transform: rotate(-90deg);
+		left: 460px;
+		top: 670px;
+		position: absolute;
+		animation-name: mouthMove;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes mouthMove {
+		0% {
+			top: 670px;
+			left: 430px;
+		}
+		8% {
+			left: 430px;
+		}
+		10% {
+			left: 460px;
+		}
+		13% {
+			left: 460px;
+			top: 670px;
+		}
+		14% {
+			top: 740px;
+		}
+		38% {
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 180.3799px solid rgba(159,87,56,1.00); 
+			left: 460px;
+			top: 740px;
+		}
+		39% {
+			transform: rotate(-90deg);
+		}
+		40% {
+			border-left: 30px solid transparent;
+			border-right: 30px solid transparent;
+			border-top: 50px solid rgba(159,87,56,1.00);
+			transform: rotate(-40deg);
+			left: 520px;
+			top: 760px;
+		}
+		100% {
+			top: 740px;
+			border-top: 50px solid rgba(159,87,56,1.00);
+			border-left: 30px solid transparent;
+			border-right: 30px solid transparent;
+			transform: rotate(-40deg);
+			left: 520px;
+			top: 760px;
+		}
+	}
+	.hairHolder {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		animation-name: hairMove;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes hairMove {
+		0% {
+			top: 0px;
+		}
+		13% {
+			top: 0px;
+		}
+		14% {
+			top: -20px;
+		}
+		15% {
+			top: 0px;	
+		}
+		38% {
+
+		}
+		39% {
+
+		}
+		40% {
+
+		}
+		100% {
+
+		}
+	}
+	.hairTriangle {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 111px solid transparent;
+		border-right: 111px solid transparent;
+		border-top: 50px solid rgba(31,31,31,1.00);
+		transform: rotate(-87deg);
+		left: 680px;
+		top: 440px;
+	}
+	.hairTriangle2 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 110px solid transparent;
+		border-right: 110px solid transparent;
+		border-top: 90px solid rgba(31,31,31,1.00);
+		transform: rotate(-133deg);
+		left: 610px;
+		top: 195px;
+	}
+	.hairTriangle3 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 170px solid transparent;
+		border-right: 170px solid transparent;
+		border-top: 160px solid rgba(31,31,31,1.00);
+		transform: rotate(140deg);
+		left: 300px;
+		top: 160px;
+	}
+	.hairTriangle4 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 220px solid transparent;
+		border-right: 240px solid transparent;
+		border-top: 180px solid rgba(31,31,31,1.00);
+		transform: rotate(150deg);
+		left: 170px;
+		top: 130px;
+	}
+	.hairTriangle5 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 190px solid transparent;
+		border-right: 190px solid transparent;
+		border-top: 120px solid rgba(31,31,31,1.00);
+		transform: rotate(-160deg);
+		left: 160px;
+		top: 110px;
+	}
+	.hairTriangle6 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 190px solid transparent;
+		border-right: 190px solid transparent;
+		border-top: 120px solid rgba(31,31,31,1.00);
+		transform: rotate(-178deg);
+		left: 130px;
+		top: 140px;
+	}
+	.hairTriangle7 {
+		position: absolute;
+		width: 0;
+		height: 0;
+		z-index: 1;
+		border-left: 111px solid transparent;
+		border-right: 111px solid transparent;
+		border-top: 45px solid rgba(31,31,31,1.00);
+		transform: rotate(120deg);
+		left: 60px;
+		top: 410px;
+	}
+	.topContainer {
+		position: absolute;
+		animation-name: eyelidTop;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;	
+		}
+	@-webkit-keyframes eyelidTop {
+		0% {
+			top: 0px;
+			opacity: 100%;
+		}
+		8% {
+			top: 0px;
+		}
+		9% {
+			top: 20px;
+		}
+		12% {
+			top: 0px;
+		}
+		13% {
+			top: 20px;
+			opacity: 100%;
+		}
+		14% {
+			top: -60px;
+			opacity: 0%;
+		}
+		100% {
+			top: -60px;
+			opacity: 0%;
+		}
+	}
+	.botContainer {
+		position: absolute;
+		animation-name: eyelidBot;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		}
+	@-webkit-keyframes eyelidBot {
+		0% {
+			top: 100px;
+		}
+		8% {
+			top: 100px;
+		}
+		9% {
+			top: -30px;
+		}
+		12% {
+			top: 100px;
+		}
+		13% {
+			top: -30px
+		}
+		14% {
+			top: 100px
+		}
+		100% {
+			top: 100px;
+		}
+	}
+	.eyes {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		animation-name: shiftingEyes;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes shiftingEyes {
+		0% {
+			left: -20px;
+		}
+		9% {
+			left: -20px;
+		}
+		10% {
+			left: 0px;
+		}
+		12% {
+			top: 0px;
+		}
+		13% {
+			top: -20px;
+		}
+		14% {
+			top: 0px;
+		}
+		19% {
+			left: 0px;
+		}
+		20% {
+			left: -20px;
+		}
+		30% {
+			left: -20px
+		}
+		31% {
+			left: 10px;
+		}
+		38% {
+			top: 0px;
+		}
+		40% {
+			top: -10px;
+		}
+		100% {
+			left: 10px;
+			top: -10px;
+		}
+	}
+	.pupils {
+		position: absolute;
+		animation-name: pupilMove;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes pupilMove {
+		0% {
+			left: -50px;
+		}
+		9% {
+			left: -50px;
+		}
+		10% {
+			left: 0px;
+		}
+		19% {
+			left: 0px;
+		}
+		20% {
+			left: -50px;
+		}
+		30% {
+			left: -50px;
+		}
+		31% {
+			left: 60px;
+			top: 0px;
+		}
+		38% {
+			left: 60px;
+			top: 0px;
+		}
+		40% {
+			left: 40px;
+			top: -40px;
+		}
+		100% {
+			left: 40px;
+			top: -40px;
+		}
+</style>
+	
+</head>
+<body>
+<div class="mainholder">
+	<div class="hairHolder">
+		<div class="hairBG"></div>
+		<div class="hairCircle"></div>
+		<div class="hairCircle2"></div>
+		<div class="hairTriangle"></div>
+		<div class="hairTriangle2"></div>
+		<div class="hairTriangle3"></div>
+		<div class="hairTriangle4"></div>
+		<div class="hairTriangle5"></div>
+		<div class="hairTriangle6"></div>
+		<div class="hairTriangle7"></div>
+	</div>
+	<div class="head"></div>
+	<div class="eyes">
+		<div class="leftBag"></div>
+		<div class="rightBag"></div>
+		<div class="leftSclera"></div>
+		<div class="rightSclera"></div>
+		<div class="pupils">
+			<div class="leftPupil"></div>
+			<div class="rightPupil"></div>
+		</div>
+		<div class="topContainer">
+			<div class="lidTop"></div>
+		</div>
+		<div class="botContainer">
+			<div class="lidBot"></div>
+		</div>
+	</div>
+	<div class="brows">
+		<div class="leftBrow"></div>
+		<div class="rightBrow"></div>
+	</div>
+	<div class="nose"></div>
+	<div class="mouth"></div>
+	<div class="glasses">
+		<div class="leftLens"></div>
+		<div class="rightLens"></div>
+		<div class="leftPoint"></div>
+		<div class="rightPoint"></div>
+		<div class="bridge"></div>
+		<div class="bridgeCover"></div>
+	</div>
+</div>
+<div class="notes">
+	<div class="noteOne">
+		<div class="noteOval"></div>
+		<div class="noteLine"></div>
+		<div class="notePoint"></div>
+	</div>
+	<div class="noteTwo">
+		<div class="noteOval2"></div>
+		<div class="noteLine2"></div>
+	</div>
+	<div class="noteThree">
+		<div class="noteOval3"></div>
+		<div class="noteOval4"></div>
+		<div class="noteLine3"></div>
+		<div class="noteLine4"></div>
+		<div class="noteLine5"></div>
+	</div>
+</div>
+</body>
+</html>
