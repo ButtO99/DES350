@@ -6,7 +6,29 @@
 
 <style>
 	body {
-		background: #6663AF;
+		background: #5A3C90;
+  		overflow: hidden;
+		animation-name: BG;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes BG {
+		53% {
+			background: #5A3C90;
+		}
+		54% {
+			background: #922E85;
+		}
+		57% {
+			background: #AC2D61;	
+		}
+		59% {
+			background: #CF314A;
+		}
+		100% {
+			background: #5A3C90;
+		}
 	}
 	.notes {
 		position: absolute;
@@ -17,8 +39,8 @@
 		position: absolute; 
 		left: 540px;
 		top: 450px;
-		
-		animation-name: noteOne, notePulse;
+		transform-origin: right;
+		animation-name: noteOne;
 		animation-delay: 0s;
 		animation-duration: 10s;
 		animation-iteration-count: infinite;
@@ -34,35 +56,38 @@
 		45% {
 			opacity: 100%;
 		}
+		53% {
+			top: -90px;
+			transform: rotate(0deg);
+		}
+		54% {
+			top: -20px;
+			left: 550px;
+			transform: rotate(20deg);	
+		}
 		55% {
+			top: -100px;
 		}
 		60% {
-		}
-		65% {
-			top: -90px;
-		}
-		66% {
-			top: -20px;
-			left: 550px;
-		}
-		80% {
 			opacity: 100%;
 		}
-		100% {
-			top: -20px;
-			left: 550px;
+		80% {
+			top: 7000px;
+			left: -700px;
 			opacity: 0%;
+			transform: rotate(360deg);
 		}
-	}
-	@-webkit-keyframes notePulse {
-		
+		100% {
+			opacity: 0%;
+			transform: rotate(360deg);
+		}
 	}
 	.noteOval {
 		position: absolute;
 		height: 55px;
 		width: 100px;
 		border-radius: 100%;
-		background: #C6BAEC;
+		background: #E59C9C;
 		top: 200px;
 		left: 8px;
 		}
@@ -70,7 +95,7 @@
 		position: absolute;
 		height: 148.8175px;
 		width: 20.8296px;
-		background: #C6BAEC;
+		background: #E59C9C;
 		top: 80px;
 		left: 94.9px;
 		transform:rotate(6deg)
@@ -81,10 +106,168 @@
 		height: 0;
 		border-left: 10px solid transparent;
 		border-right: 15px solid transparent;
-		border-top: 50px solid #C6BAEC;
+		border-top: 50px solid #E59C9C;
 		transform: rotate(-60deg);
 		top: 79.7px;
 		left: 126.4px;
+	}
+	.noteTwo {
+		position: absolute; 
+		left: 540px;
+		top: 450px;
+		
+		animation-name: noteTwo;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	@-webkit-keyframes noteTwo {
+		0% {
+			opacity: 0%;
+		}
+		47% {
+			opacity: 0%;
+			top: 450px;
+		}
+		48% {
+			opacity: 100%;
+		}
+		53% {
+			transform:rotate(0deg);
+		}
+		55% {
+			top: -200px;
+			left: 630px;
+		}
+		56% {
+			transform:rotate(50deg);
+			top: 100px;
+		}
+		57% {
+			top: 70px;
+		}
+		60% {
+			opacity: 100%;
+		}
+		80% {
+			top: 7000px;
+			left: 3000px;
+			opacity: 0%;
+			transform: rotate(500deg);
+		}
+		100% {
+			opacity: 0%;
+		}
+	}
+	.noteTwoOvalLeft {
+		position: absolute;
+		height: 55px;
+		width: 100px;
+		border-radius: 100%;
+		background: #B193F9;
+		top: 200px;
+		left: 8px;
+		}
+	.noteTwoOvalRight {
+		position: absolute;
+		height: 55px;
+		width: 100px;
+		border-radius: 100%;
+		background: #B193F9;
+		top: 200px;
+		left: 142px;
+	}
+	.noteTwoLineLeft {
+		position: absolute;
+		height: 148.8175px;
+		width: 20.8296px;
+		background: #B193F9;
+		top: 75px;
+		left: 94.9px;
+		transform:rotate(6deg)
+	}
+	.noteTwoLineHor {
+		position: absolute;
+		height: 148.8175px;
+		width: 20.8296px;
+		background: #B193F9;
+		top: 10px;
+		left: 167px;
+		transform:rotate(90deg)
+	}
+	.noteTwoLineRight {
+		position: absolute;
+		height: 148.8175px;
+		width: 20.8296px;
+		background: #B193F9;
+		top: 75px;
+		left: 226px;
+		transform:rotate(6deg)
+	}
+	.noteThree {
+		position: absolute; 
+		left: 540px;
+		top: 450px;
+		
+		animation-name: noteThree;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	@-webkit-keyframes noteThree {
+		0% {
+			opacity: 0%;
+		}
+		50% {
+			opacity: 0%;
+			top: 450px;
+		}
+		51% {
+			opacity: 100%;
+		}
+		57% {
+			transform:rotate(0deg);
+		}
+		58% {
+			top: -100px;
+			transform:rotate(20deg);
+		}
+		59% {
+			top: 70px;
+			left: 540px;
+		}
+		60% {
+			top: 0px;
+		}
+		85% {
+			top: 7000px;
+			left: 3000px;
+			opacity: 0%;
+			transform: rotate(360deg);
+		}
+		100% {
+			opacity: 0%;
+		}
+	}
+	.noteThreeOval {
+		position: absolute;
+		height: 55px;
+		width: 100px;
+		border-radius: 100%;
+		background: #BCF8B5;
+		top: 200px;
+		left: 8px;
+		}
+	.noteThreeLine {
+		position: absolute;
+		height: 148.8175px;
+		width: 20.8296px;
+		background: #BCF8B5;
+		top: 80px;
+		left: 94.9px;
+		transform:rotate(6deg)
 	}
 	.mainholder {
 		position: fixed;
@@ -99,19 +282,55 @@
 	}
 	@-webkit-keyframes head {
 		0% {
-			top: 100px;
+			top:100px;
 		}
 		12% {
-			top: 100px;
+			top:100px;
 		}
 		13% {
-			top: -40px;
+			top:-40px;
 		}
 		14% {
+			top:100px;
+		}
+		53% {
+			top:100px;
+		}
+		54% {
+			top:120px;
+		}
+		55% {
+			top:110px;
+		}
+		57% {
+			top:180px;
+		}
+		58% {
+			top:170px;
+		}
+		59% {
+			top:170px;
+		}
+		60% {
+			top: 210px;
+		}
+		61% {
+			top: 200px;
+		}
+		68% {
+			top: 200px;	
+		}
+		72% {
+			top: 210px;
+		}
+		74% {
+			top: 80px;
+		}
+		76% {
 			top: 100px;
 		}
 		100% {
-			top: 100px;
+			top:100px;
 		}
 	}
 	.hairBG {
@@ -194,6 +413,38 @@
 		background: rgba(31,31,31,1.00);
 		left: 340px;
 		top: 460px;
+		animation-name: leftPup;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes leftPup {
+		53% {
+			left: 340px;
+		}
+		54% {
+			left: 300px;		
+		}
+		56% {
+			left: 300px;
+			transform:scale(100%)
+		}
+		57% {
+			left: 340px;
+			transform:scale(300%)
+		}
+		59% {
+			left: 340px;
+			transform:scale(300%)	
+		}
+		60% {
+			left: 340px;
+			transform:scale(100%)		
+		}
+		100% {
+			left: 340px;	
+			transform:scale(100%)
+		}
 	}
 	.rightPupil {
 		position: absolute;
@@ -203,6 +454,40 @@
 		background: rgba(31,31,31,1.00);
 		left: 600px;
 		top: 460px;
+		animation-name: rightPup;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes rightPup {
+		53% {
+			left: 600px;
+		}
+		54% {
+			left: 640px;		
+		}
+		56% {
+			left: 640px;
+		}
+		56% {
+			transform:scale(100%)
+		}
+		57% {
+			left: 600px;
+			transform:scale(300%)
+		}
+		59% {
+			left: 600px;
+			transform:scale(300%)		
+		}
+		60% {
+			left: 600px;
+			transform:scale(100%)	
+		}
+		100% {
+			left: 600px;	
+			transform:scale(100%)
+		}
 	}
 	.lidTop {
 		position: absolute;
@@ -243,8 +528,35 @@
 		13% {
 			top: 330px;
 		}
+		53% {
+			top: 330px;	
+		}
+		54% {
+			top: 370px;
+		}
+		59% {
+			top: 330px;	
+		}
+		60% {
+			top: 370px;
+		}
+		72% {
+			top: 370px;
+		}
+		73% {
+			left: 270px;
+		}
+		74% {
+			left: 280px;
+			top: 370px;
+		}
+		95% {
+			top: 370px;
+			left: 280px;
+		}
 		100% {
-			top: 330px;
+			top: 390px;
+			left: 270px;
 		}
 	}
 	.rightBrow {
@@ -269,8 +581,33 @@
 		13% {
 			top: 330px;
 		}
+		53% {
+			top: 330px;	
+		}
+		54% {
+			top: 370px;
+		}
+		59% {
+			top: 330px;	
+		}
+		60% {
+			top: 300px;
+		}
+		73% {
+			left: 540px;
+			top: 300px;
+		}
+		74% {
+			left: 530px;
+			top: 370px;
+		}
+		95% {
+			left: 530px;
+			top: 370px;
+		}
 		100% {
-			top: 330px;
+			top: 390px;
+			left: 540px;
 		}
 	}
 	.nose {
@@ -280,6 +617,21 @@
 		background: rgba(159,87,56,1.00);
 		left: 450px;
 		top: 500px;
+		animation-name: noseJump;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+@-webkit-keyframes noseJump {
+		72% {
+			top: 500px;
+		}
+		73% {
+			top: 480px;
+		}
+		74% {
+			top: 500px;
+		}
 	}
 	.glasses {
 		position: absolute;
@@ -320,8 +672,65 @@
 		31% {
 			left: 10px;
 		}
-		100% {
+		39% {
+			top: 0px;
+		}
+		40% {
+			top: -10px;
 			left: 10px;
+		}
+		50% {
+			left: -10px;
+		}
+		53% {
+			top: -10px;
+			left: -10px;
+			transform: rotate(0deg);
+		}
+		54% {
+			left: -40px;
+			top: 60px;		
+			transform: rotate(-5deg);
+		}
+		56% {
+			left: -40px;
+			top: 60px;		
+			transform: rotate(-5deg);
+		}
+		57% {
+			left: 100px;
+			top: -40px;		
+			transform: rotate(10deg);
+		}
+		59% {
+			left: 100px;
+			top: -40px;		
+			transform: rotate(10deg);	
+		}
+		60% {
+			left: -40px;
+			top: 100px;		
+			transform: rotate(-5deg);	
+		}
+		71% {
+			top: 100px;		
+		}
+		72% {
+			top: 120px;
+		}
+		76% {
+			top: -20px;
+			left: 0px;
+			transform: rotate(0deg);
+		}
+		77% {
+			top: 0px;
+		}
+		95% {
+			left: 0px;
+		}
+		100% {
+			left: -10px;
 		}
 	}
 	.leftLens {
@@ -428,14 +837,106 @@
 			left: 520px;
 			top: 760px;
 		}
-		100% {
-			top: 740px;
+		48% {
+			border-left: 50px solid transparent;
+			border-right: 30px solid transparent;
 			border-top: 50px solid rgba(159,87,56,1.00);
+			transform: rotate(-40deg);
+			left: 500px;
+			top: 760px;		
+		}
+		53% {
 			border-left: 30px solid transparent;
 			border-right: 30px solid transparent;
+			border-top: 50px solid rgba(159,87,56,1.00);
 			transform: rotate(-40deg);
 			left: 520px;
 			top: 760px;
+		}
+		54% {
+			border-left: 15px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 140px solid rgba(159,87,56,1.00); 
+			left: 500px;
+			top: 750px;		
+			transform: rotate(-130deg);
+		}
+		56% {
+			border-left: 15px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 140px solid rgba(159,87,56,1.00); 
+			left: 500px;
+			top: 750px;		
+			transform: rotate(-130deg);		
+		}
+		57% {
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-top: 30px solid rgba(159,87,56,1.00);
+			transform: rotate(180deg);
+			left: 440px;
+			top: 840px;
+		}
+		59% {
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-top: 30px solid rgba(159,87,56,1.00);
+			transform: rotate(180deg);
+			left: 440px;
+			top: 840px;
+			height: 0px;
+			width: 0px;
+			background: none;
+		}
+		60% {
+			border-left: 0px solid transparent;
+			border-right: 0px solid transparent;
+			border-top: 0px solid rgba(159,87,56,1.00);
+			transform: rotate(160deg);
+			left: 410px;
+			top: 760px;	
+			height: 10px;
+			width: 300px;
+			background: rgba(159,87,56,1.00);
+		}
+		73% {
+			border-left: 0px solid transparent;
+			border-right: 0px solid transparent;
+			border-top: 0px solid rgba(159,87,56,1.00);
+			transform: rotate(160deg);
+			left: 410px;
+			top: 760px;	
+			height: 10px;
+			width: 300px;
+			background: rgba(159,87,56,1.00);
+			filter: blur(0px);
+			opacity: 100%;
+		}
+		74% {
+			width: 0;
+			height: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 180.3799px solid rgba(159,87,56,1.00);
+			transform: rotate(-90deg);
+			top: 670px;
+			left: 460px;
+			filter: blur(5px);
+			opacity: 25%;
+		}
+		75% {
+			filter: blur(0px);
+			opacity: 100%;
+		}
+		100% {
+			width: 0;
+			height: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 180.3799px solid rgba(159,87,56,1.00);
+			transform: rotate(-90deg);
+			top: 670px;
+			left: 430px;
 		}
 	}
 	.hairHolder {
@@ -460,17 +961,44 @@
 		15% {
 			top: 0px;	
 		}
-		38% {
-
+		53% {
+			top: 0px;
 		}
-		39% {
-
+		54% {
+			top: 20px;
 		}
-		40% {
-
+		55% {
+			top: 0px;
+		}
+		56% {
+			top: 0px;
+		}
+		57% {
+			top: 20px;
+		}
+		58% {
+			top: 0px;
+		}
+		59% {
+			top: 0px;
+		}
+		60% {
+			top: 20px;
+		}
+		61% {
+			top: 0px;
+		}
+		72% {
+			top: 0px;
+		}
+		73% {
+			top: -30px;
+		}
+		74% {
+			top: 0px;
 		}
 		100% {
-
+			top: 0px;
 		}
 	}
 	.hairTriangle {
@@ -496,6 +1024,67 @@
 		transform: rotate(-133deg);
 		left: 610px;
 		top: 195px;
+	}
+	.bangs {
+		position: absolute;
+		z-index: 2;
+		animation-name: bangsMove;
+		animation-delay: 0s;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@-webkit-keyframes bangsMove {
+		0% {
+			transform: rotate(0deg);
+		}
+		13% {
+			transform: rotate(0deg);
+		}
+		14% {
+			transform: rotate(3deg);
+		}
+		15% {
+			transform: rotate(0deg);
+		}
+		53% {
+			transform: rotate(0deg);
+		}
+		54% {
+			transform: rotate(-2deg);
+		}
+		55% {
+			transform: rotate(0deg);
+		}
+		56% {
+			transform: rotate(0deg);
+		}
+		57% {
+			transform: rotate(-2deg);
+		}
+		58% {
+			transform: rotate(0deg);
+		}
+		59% {
+			transform: rotate(0deg);
+		}
+		60% {
+			transform: rotate(-2deg);
+		}
+		61% {
+			transform: rotate(0deg);
+		}
+		72% {
+			transform: rotate(0deg);	
+		}
+		73% {
+			transform: rotate(5deg);
+		}
+		74% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
 	}
 	.hairTriangle3 {
 		position: absolute;
@@ -586,9 +1175,38 @@
 			top: -60px;
 			opacity: 0%;
 		}
-		100% {
+		53% {
 			top: -60px;
+			opacity: 0%;	
+		}
+		54% {
+			top: 10px;
+			opacity: 100%;		
+		}
+		56% {
+			top: 10px;
+			opacity: 100%;
+		}
+		57% {
+			top: -60px;
+			opacity: 100%;
+		}
+		60% {
 			opacity: 0%;
+		}
+		73% {
+			opacity: 0%;
+			top: -60px;
+		}
+		75% {
+			opacity: 100%;
+		}
+		90% {
+			top: 0px;
+		}
+		100% {
+			top: 0px;
+			opacity: 100%;
 		}
 	}
 	.botContainer {
@@ -612,10 +1230,22 @@
 			top: 100px;
 		}
 		13% {
-			top: -30px
+			top: -30px;
 		}
 		14% {
-			top: 100px
+			top: 100px;
+		}
+		53% {
+			top: 100px;		
+		}
+		54% {
+			top: -10px;	
+		}
+		56% {
+			top: -10px;		
+		}
+		57% {
+			top: 100px;		
 		}
 		100% {
 			top: 100px;
@@ -666,10 +1296,44 @@
 		}
 		40% {
 			top: -10px;
+			left: 10px;
+		}
+		50% {
+			left: -10px;
+		}
+		53% {
+			top: -10px;
+			left: -10px;
+		}
+		54% {
+			top: 0px;
+			left: 0px;
+		}
+		59% {
+			top: 0px;
+			left: 0px;	
+		}
+		60% {
+			top: -10px;
+		}
+		71% {
+			top: -10px;
+		}
+		72% {
+			top: 10px;
+		}
+		73% {
+			top: -10px;
+		}
+		74% {
+			top: 0px;
+		}
+		95% {
+			left: 0px;
 		}
 		100% {
-			left: 10px;
-			top: -10px;
+			top: 0px;
+			left: -20px;
 		}
 	}
 	.pupils {
@@ -702,17 +1366,40 @@
 			left: 60px;
 			top: 0px;
 		}
-		38% {
-			left: 60px;
-			top: 0px;
-		}
 		40% {
 			left: 40px;
+			top: -30px;
+		}
+		50% {
+			left: -50px;
+			top: 10px;
+		}
+		53% {
+			left: -50px;
+			top: 10px;	
+		}
+		54% {
+			left: 0px;
+			top: 20px;	
+		}
+		59% {
+			top: 20px;		
+		}
+		60% {
+			top: -40px;	
+		}
+		71% {
 			top: -40px;
 		}
+		85% {
+			top: 0px;
+		}
+		95% {
+			left: 0px;
+		}
 		100% {
-			left: 40px;
-			top: -40px;
+			top: 0px;
+			left: -50px;
 		}
 </style>
 	
@@ -725,10 +1412,12 @@
 		<div class="hairCircle2"></div>
 		<div class="hairTriangle"></div>
 		<div class="hairTriangle2"></div>
-		<div class="hairTriangle3"></div>
-		<div class="hairTriangle4"></div>
-		<div class="hairTriangle5"></div>
-		<div class="hairTriangle6"></div>
+		<div class="bangs">
+			<div class="hairTriangle3"></div>
+			<div class="hairTriangle4"></div>
+			<div class="hairTriangle5"></div>
+			<div class="hairTriangle6"></div>
+		</div>
 		<div class="hairTriangle7"></div>
 	</div>
 	<div class="head"></div>
@@ -770,15 +1459,15 @@
 		<div class="notePoint"></div>
 	</div>
 	<div class="noteTwo">
-		<div class="noteOval2"></div>
-		<div class="noteLine2"></div>
+		<div class="noteTwoOvalLeft"></div>
+		<div class="noteTwoOvalRight"></div>
+		<div class="noteTwoLineLeft"></div>
+		<div class="noteTwoLineHor"></div>
+		<div class="noteTwoLineRight"></div>
 	</div>
 	<div class="noteThree">
-		<div class="noteOval3"></div>
-		<div class="noteOval4"></div>
-		<div class="noteLine3"></div>
-		<div class="noteLine4"></div>
-		<div class="noteLine5"></div>
+		<div class="noteThreeOval"></div>
+		<div class="noteThreeLine"></div>
 	</div>
 </div>
 </body>
