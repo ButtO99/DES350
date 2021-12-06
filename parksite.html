@@ -1,0 +1,704 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<title>Zion National Park</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	
+<script type="text/javascript" src="scripts/rellax.min.js"></script>
+	
+<script>
+  //Enable Horizontal Parallax Scrolling
+  var rellax = new Rellax('.rellax', {
+    horizontal:true
+  });
+</script>
+	
+<style>
+
+	body {
+ 		margin: 0;
+ 		padding: 0;
+		font-family: 'Josefin Sans', sans-serif;
+	}
+	
+	.section {
+		width: 1920px;
+		height: 1080px;
+		z-index: -1;
+	}
+	
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 400vw;
+		transform: rotate(90deg) translateY(-100vh);
+		transform-origin: top left;
+		position: fixed;
+		background-color: blue;
+	}
+	
+	.outer-wrapper {
+		width: 100vh;
+		height: 100vw;
+		transform: rotate(-90deg) translateX(-100vh);
+		transform-origin: top left;
+		position: absolute;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		background-color: green;
+	}
+	
+	::-webkit-scrollbar {
+		display: none;
+	}
+	.one {
+		background-image: url("assets/bg-01.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.two {
+		background-image: url("assets/bg-02.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.three {
+		background-image: url("assets/bg-03.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.four {
+		background-image: url("assets/bg-04.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.visitbutton {
+		color: white;
+		text-decoration: none;
+		font-size: 45px;
+		background-color: #0E6A00;
+		position: absolute;
+		top: 840px;
+		left: 40px;
+		z-index: 5;
+		border-radius: 34px;
+		padding: 15px 20px 10px 20px;
+	}
+	
+	h1 {
+		font-weight: 700;
+		color: white;
+		position: absolute;
+		left: 710px;
+		top: 420px;
+		z-index: 5;
+		font-size: 60px;
+	}
+	
+	.about {
+		font-weight: 600;
+		color: white;
+		position: absolute;
+		left: 710px;
+		top: 510px;
+		width: 600px;
+		z-index: 5;
+		font-size: 25px;	
+		border-radius: 34px;
+		padding: 30px;
+   		background: rgba(0, 0, 0, 0.10);
+		line-height: 29px;
+	}
+	.mountain-03 {
+		position: absolute;
+		z-index: 4;
+		left: -54px;
+		top: -10px;
+		height: 1000px;
+		pointer-events: none;
+	}
+	
+	.trees {
+		position: absolute;
+		left: 212px;
+		top: 90px;
+		height: 850px;
+		z-index: 3;
+		pointer-events: none;
+	}
+	
+	.mountain-02 {
+		position: absolute;
+		z-index: 2;
+		left: -1px;
+		top: -30px;
+		height: 970px;
+		pointer-events: none;
+	}
+	.mountain-01 {
+		position: absolute;
+		z-index: 1;
+		left: -360px;
+		top: 230px;
+		height: 970px;
+		pointer-events: none;
+	}
+	
+	.title {
+		position: absolute;
+		z-index: 1;
+		left: -460px;
+		top: -280px;
+		height: 900px;
+		pointer-events: none;
+	}
+	
+	.sun {
+		position: absolute;
+		left: -460px;
+		top: -80px;
+		height: 1000px;
+		pointer-events: none;
+	}
+	
+	.clouds {
+		position: fixed;
+		left: -160px;
+		top: -140px;
+		height: 850px;
+		z-index: -1;
+		pointer-events: none;
+	}
+	
+	.cloudtransition {
+		position: absolute;
+		left: -78px;
+		top: 0px;
+		height: 1000px;
+		z-index: -1;
+		pointer-events: none;
+	}
+	.trees-02 {
+		position: absolute;
+		left: 1723px;
+		top: 140px;
+		height: 850px;
+		z-index: 2;
+		pointer-events: none;
+	}
+	
+	h2 {
+		font-weight: 700;
+		color: white;
+		position: absolute;
+		z-index: 5;
+		font-size: 60px;
+		top: -20px;
+	}
+	
+	.tent {
+		position: absolute;
+		left: 1723px;
+		top: -11px;
+		height: 1000px;
+		z-index: 2;
+		pointer-events: none;
+	}
+	
+	.hiketitle {
+		color: white;
+   		background: rgba(3, 120, 0, 0.90);
+		padding: 20px 520px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 35px;
+		top: 80px;
+	}
+	
+	.hikebutton {
+		color: white;
+		position: absolute;
+   		background: rgba(17, 71, 24);
+		padding: 13px 20px 10px 20px;
+		border-radius: 100px;
+		text-decoration: none;
+		top: 130px;
+		margin-left: 440px;
+		font-size: 20px;
+	}
+	
+	.cards {
+		top: 40px;
+		margin-left: 150px;
+		position: absolute;
+	}
+	
+	.cards:hover {
+		opacity: 50%;
+	}
+	
+	.cardone {
+		position: absolute;
+		height: 170px;
+		top: 185px;
+		margin-left: -110px;
+	}
+	
+	.cardtwo {
+		position: absolute;
+		height: 170px;
+		top: 185px;
+		margin-left: 70px;
+	}
+
+	.cardthree {
+		position: absolute;
+		height: 170px;
+		top: 185px;
+		margin-left: 260px;	
+	}
+	
+	.cardfour {
+		position: absolute;
+		height: 170px;
+		top: 185px;
+		margin-left: 450px;	
+	}
+	
+	.cardfive {
+		position: absolute;
+		height: 170px;
+		top: 185px;
+		margin-left: 630px;	
+	}
+	
+	.card-container {
+		height: 200px;
+		width: 938px;
+		background: rgba(3, 120, 0, 0.35);
+		border-radius: 20px;
+		top: 210px;
+		position: absolute;
+		z-index: -1;
+	}
+	
+	.camptitle {
+		color: white;
+   		background: rgba(3, 120, 0, 0.90);
+		padding: 20px 500px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 35px;
+		z-index: 2;
+		top: 393px;
+	}
+	
+	.campdes {
+		color: white;
+   		background: rgba(3, 120, 0, 0.75);
+		padding: 20px 20px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 25px;
+		z-index: 2;
+		top: 500px;	
+		width: 626px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+	
+	.guidetitle {
+		color: white;
+   		background: rgba(3, 120, 0, 0.90);
+		padding: 20px 413px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 35px;
+		z-index: 2;
+		top: 645px;
+	}
+	
+	.guidedes {
+		color: white;
+   		background: rgba(3, 120, 0, 0.75);
+		padding: 20px 20px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 25px;
+		z-index: 2;
+		top: 755px;	
+		width: 630px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+	
+	.lodgetitle {
+		color: white;
+   		background: rgba(3, 120, 0, 0.90);
+		padding: 20px 109px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 35px;
+		z-index: 2;
+		top: 393px;
+		margin-left: 680px;
+	}
+	
+	.lodgedes {
+		color: white;
+   		background: rgba(3, 120, 0, 0.75);
+		padding: 20px 20px 82px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 25px;
+		z-index: 3;
+		top: 500px;	
+		width: 222px;
+		line-height: 32px;
+		font-weight: 300;
+		margin-left: 682px;
+	}
+	
+	.lodgebutton {
+		color: white;
+		position: absolute;
+   		background: rgba(17, 71, 24);
+		padding: 13px 20px 10px 20px;
+		border-radius: 100px;
+		text-decoration: none;
+		top: 690px;
+		margin-left: 690px;
+		font-size: 20px;
+		z-index: 3;
+	}
+	
+	.horsetitle {
+		color: white;
+   		background: rgba(3, 120, 0, 0.90);
+		padding: 20px 400px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 35px;
+		top: 80px;	
+		margin-left: 955px;
+	}
+	
+	.horsedes {
+		color: white;
+   		background: rgba(3, 120, 0, 0.75);
+		padding: 20px 20px 20px 20px;
+		border-radius: 20px;
+		position: absolute;
+		font-size: 25px;
+		z-index: 3;
+		top: 186px;	
+		width: 660px;
+		line-height: 32px;
+		font-weight: 300;
+		margin-left: 955px;		
+	}
+	
+	.cliffside {
+		position: absolute;
+		left: 1723px;
+		top: -10px;
+		height: 1000px;
+		z-index: -2;
+		pointer-events: none;
+	}
+	
+	.clouds-02 {
+		position: absolute;
+		left: 1700px;
+		top: 0px;
+		height: 1000px;
+		z-index: -3;
+		pointer-events: none;
+	}
+	
+	.cliffside-02 {
+		position: absolute;
+		left: 3501px;
+		top: -10px;
+		height: 1000px;
+		z-index: 1;
+		pointer-events: none;
+	}
+	
+	h3 {
+		font-weight: 700;
+		color: white;
+		position: absolute;
+		z-index: 5;
+		font-size: 60px;
+		top: -20px;
+		margin-left: 222px;
+	}
+	
+	.mapouter {
+		top: 230px;
+		margin-left: 230px;
+		position: absolute;
+		z-index: 3;
+	}
+	
+	.mapframe {
+		position: absolute;
+		z-index: 1;
+   		background: rgba(0, 26, 42, 0.75);
+		height: 600px;
+		width: 1150px;
+		top: 180px;
+		margin-left: 155px;
+		border-radius: 20px;
+		padding-bottom: 20px;
+	}
+	
+	.coordinates {
+		color: white;
+		font-size: 20px;
+		margin-top: 155px;
+		margin-left: 1080px;
+		z-index: 3;
+		position: absolute;
+	}
+	
+	.cloudtransition-02 {
+		position: absolute;
+		left: 3478px;
+		top: 1px;
+		height: 1000px;
+		z-index: -1;
+		pointer-events: none;
+	}
+	
+	.trees-04 {
+		position: absolute;
+		left: 3500px;
+		top: -10px;
+		height: 1000px;
+		z-index: 0;
+		pointer-events: none;
+	}
+	
+	h4 {
+		font-weight: 700;
+		color: white;
+		position: absolute;
+		z-index: 5;
+		font-size: 60px;
+		top: 60px;
+		margin-left: 400px;	
+	}
+
+	.poster1 {
+		background: url("assets/poster1.png") no-repeat;
+		background-size: contain;
+		position: absolute;
+		height: 468px;
+		width: 302px;
+		margin-left: 300px;
+		top: 250px;
+  		border: 10px solid white;
+	}
+	
+	.poster1:hover {
+		background: url("assets/poster1.gif") no-repeat;
+		background-size: contain;
+	}
+	
+	.poster2 {
+		background: url("assets/poster2.png") no-repeat;
+		background-size: contain;
+		position: absolute;
+		height: 468px;
+		width: 302px;
+		margin-left: 650px;
+		top: 250px;
+  		border: 10px solid white;
+	}
+	
+	.poster2:hover {
+		background: url("assets/poster2.gif") no-repeat;
+		background-size: contain;
+	}
+	
+	.poster3 {
+		background: url("assets/poster3.png") no-repeat;
+		background-size: contain;
+		position: absolute;
+		height: 468px;
+		width: 302px;
+		margin-left: 1000px;
+		top: 250px;
+  		border: 10px solid white;
+	}
+	
+	.poster3:hover {
+		background: url("assets/poster3.gif") no-repeat;
+		background-size: contain;
+	}
+	
+	.mountain-04 {
+		position: absolute;
+		left: 3500px;
+		top: -10px;
+		height: 1000px;
+		z-index: -1;
+		pointer-events: none;
+	}
+	
+	.trees-03 {
+		position: absolute;
+		left: 3500px;
+		top: -10px;
+		height: 1000px;
+		z-index: -2;
+		pointer-events: none;
+	}
+	
+	.trees-05 {
+		position: absolute;
+		left: 5278px;
+		top: -10px;
+		height: 1000px;
+		z-index: 0;
+		pointer-events: none;
+	}
+	
+	.mountain-05 {
+		position: absolute;
+		left: 5278px;
+		top: -10px;
+		height: 1000px;
+		z-index: -1;
+		pointer-events: none;
+	}
+	
+	.endpiece {
+		position: absolute;
+		left: 7056px;
+		top: -10px;
+		height: 1000px;
+		z-index: -2;
+		pointer-events: none;
+	}
+	
+	.moon {
+		position: absolute;
+		left: 7100px;
+		top: 140px;
+		height: 500px;
+		z-index: -3;
+		pointer-events: none;
+	}
+	.trees-06 {
+		position: absolute;
+		left: 5278px;
+		top: -10px;
+		height: 1000px;
+		z-index: -2;
+		pointer-events: none;
+	}
+	
+	.stars {
+		position: absolute;
+		left: 5278px;
+		top: -10px;
+		height: 1000px;
+		z-index: -2;
+		pointer-events: none;
+	}
+	
+</style>
+
+</head>
+
+<body>
+	
+	<div class="outer-wrapper">
+		<div class="wrapper">
+			<div class="section one">
+				<h1>About the Park</h1>
+				<p class="about rellax" data-rellax-speed="5" data-rellax-vertical-scroll-axis="x">From hiking to horseback riding, your outdoor adventures at Zion will be unforgettable. Zion’s 229.1 mi² of space to explore and rich history will make a trip your favorite in no time. The vast Zion Canyon may be the main focus, but don’t be afraid to check out its many rivers and smaller companion trail found in the Kolob Canyons. The diverse wildlife of Zion will also wow you on your travels. With safety measures in place, you will be sure to spot deer, falcons, eagles, and maybe even mountain lions!</p>
+				<a class="visitbutton" href="https://www.nps.gov/zion/index.htm">Visit &rarr;</a>
+				<img class="mountain-03" alt="Big Cliff" src="assets/mountain-03.png">
+				<img class="trees" alt="Transitional Trees" src="assets/trees-01.png">
+				<img class="mountain-02" alt="Middle Cliff" src="assets/mountain-02.png">
+				<img class="mountain-01" alt="Back Cliff" src="assets/mountain-01.png">
+				<img class="title" alt="Zion logo" src="assets/title-01.png">
+				<img class="sun rellax" data-rellax-speed="10" alt="Rising Sun" src="assets/sun-01.png">
+				<img class="cloudtransition" alt="Transitional Clouds Left" src="assets/cloudtransition-01.png">
+				<img class="clouds" alt="Background Clouds" src="assets/clouds-01.png">
+			</div>
+			
+			<div class="section two">
+				<h2>Plan Your Trip</h2>
+				<p class="hiketitle">5+ Stunning Hiking Trails</p>
+				<a href="https://zionnationalpark.com/explore/things-to-do/hike/" class="hikebutton">View All Trails</a>
+				<div class="cards">
+					<a href="https://media.deseretdigital.com/file/64e6047674?type=jpeg&quality=55&c=15&a=4379240d"><img class="cardone" alt="riversidewalk" src="assets/card-03.png"></a>
+				</div>
+				<div class="cards">
+					<a href="https://visitutahkenticoprod.blob.core.windows.net/cmsroot/visitutah/media/site-assets/three-season-photography/mighty-5/zion/web2000_stock-photo-weeping-rock-77329373.jpg"><img class="cardtwo" alt="weepingrock" src="assets/card-01.png"></a>
+				</div>
+				<div class="cards">
+					<a href="https://s27363.pcdn.co/wp-content/uploads/2020/05/Canyon-Overlook-1.jpg.optimal.jpg"><img class="cardthree" alt="canyonoverlook" src="assets/card-04.png"></a>
+				</div>
+				<div class="cards">					
+					<a href="https://visitutahkenticoprod.blob.core.windows.net/cmsroot/visitutah/media/site-assets/three-season-photography/mighty-5/zion/zion-national-park_the-narrows_istock.jpg"><img class="cardfour" alt="narrows" src="assets/card-02.png"></a>
+				</div>
+				<div class="cards">
+					<a href="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B840%2C226%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F03%2F06%2Fangels-landing.jpg"><img class="cardfive" alt="angelslanding" src="assets/card-05.png"></a>
+				</div>
+				<div class="card-container"></div>
+				<p class="camptitle">Camping</p>
+				<p class="campdes">Zion National Park has three campgrounds. Watchman Campground located in Zion Canyon and is open all year round.</p>
+				<p class="guidetitle">Guides &amp; Tours</p>
+				<p class="guidedes">Experience a variety of guides and tours hosted across the park.</p>
+				<p class="lodgetitle">Lodging</p>
+				<p class="lodgedes">Book your stay at one of many lodging services available at Zion</p>
+				<a href="https://zionnationalpark.com/directory/lodging-services/zion-national-park-hotels/" class="lodgebutton">View Lodging Services</a>
+				<p class="horsetitle">Horseback Riding</p>
+				<p class="horsedes">A trail ride is an excellent way to explore the natural wonderland in and around Zion National Park. Let the horse do the work as it carries you into scenic areas away from the crowds of tourists. This is classic Western scenery and there is no better way to see it than on horseback.</p>
+				<img class="trees-02" alt="Transitional Trees" src="assets/trees-02.png">
+				<img class="tent" alt="Campsite" src="assets/tent-01.png">
+				<img class="cliffside" alt="Campground" src="assets/cliffside-01.png">
+				<img class="clouds-02" alt="Background Clouds" src="assets/clouds-02.png">
+				<img class="cloudtransition-02" alt="Transitional Clouds Right" src="assets/cloudtransition-02.png">
+			</div>
+			<div class="section three">
+				<h3>Location</h3>
+				<div class="mapouter"><div class="gmap_canvas"><iframe width="1000" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=zion%20national%20park&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><style>.mapouter{position:relative;text-align:right;height:600px;width:1000px;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:1000px;}</style></div></div>
+				<div class="mapframe"></div>
+				<div class="coordinates">37°18′N 113°00′W</div>
+				<img class="cliffside-02" alt="Campground" src="assets/cliffside-02.png">
+				<img class="trees-04" alt="Foreground Trees" src="assets/trees-04.png">
+				<img class="mountain-04" alt="Long Mountainside" src="assets/mountain-04.png">
+				<img class="trees-03" alt="Far Away Trees" src="assets/trees-03.png">
+			</div>
+			<div class="section four">
+				<h4>Visit More National Parks!</h4>
+				<a href="https://www.nps.gov/shen/index.htm" class="poster1"></a>
+				<a href="https://www.nps.gov/glac/index.htm" class="poster2"></a>
+				<a href="https://jkatre3.github.io/DES350/12.04_arches_info_site.html" class="poster3"></a>
+				<img class="trees-05" alt="TREES AND WHATNOT" src="assets/trees-05.png">
+				<img class="mountain-05" alt="Long Mountainside Oncemore" src="assets/mountain-05.png">
+				<img class="endpiece" alt="" src="assets/end-01.png">
+				<img class="trees-06" alt="More Far Away Trees lol" src="assets/trees-06.png">
+				<img class="stars" alt="Stars" src="assets/stars-01.png">
+				<img class="moon" alt="Moon" src="assets/moon-01.png">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
